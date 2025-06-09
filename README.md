@@ -18,7 +18,8 @@ Project Page: https://sites.google.com/view/biassembly/
 
 ## Before start
 
-To train the models, please first go to the `data` directory and download the pre-processed Breaking-Bad dataset for BiAssembly. More information about the Breaking-Bad dataset is available on this [website](https://breaking-bad-dataset.github.io).
+To train the models, please first go to the `assets` directory and download the pre-processed Breaking-Bad dataset for BiAssembly and put it under `assets/object/breaking_bad`.
+More information about the Breaking-Bad dataset is available on this [website](https://breaking-bad-dataset.github.io).
 
 To evaluate the pretrained models, please go to the `logs` directory and download the pretrained checkpoints.
 
@@ -56,7 +57,7 @@ Before training the network, it is necessary to collect a large set of interacti
 For example, to generate offline training data, run the following command:
 
     cd data_generation
-    sh scripts/run_collect_random_push_TRAIN.sh
+    python collect_data.py --split_name Train
 
 You can refer to `gen_cate_setting.py` to see the default settings of categories, modify the file and run this command to generate the json file for loading arguments:
 
