@@ -1,6 +1,6 @@
 # BiAssemble: Learning Collaborative Affordance for Bimanual Geometric Assembly
 
-![Overview](./images/teaser.jpeg)
+![Overview](./img/teaser.jpeg)
 
 **(A)** Direct learning long-horizon action trajectories of geometric assembly may face many challenges: grasping ungraspable points, grasping points not suitable for assembly (e.g., seams of fragments), robot colliding with parts and the other robot. **(B)** We formulate this task into 3 steps: pick-up, alignment and assembly. For assembly, we predict the direction that will not result in part collisions. For alignment, we transformed any assembled poses to poses easy for the robot to manipulate from the initial poses without collisions. For pick-up, we learn point-level affordance aware of graspness and the following 2 steps. **(C)** Real-World Evaluations with affordance predictions on two mugs and the corresponding manipulation.
 
