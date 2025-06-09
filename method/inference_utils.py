@@ -221,16 +221,6 @@ def draw_aff_map(aff1_scores, aff2_scores, object1_mask, object2_mask, init_pcs,
         aff2_scores = normalize_nonzero_scores(aff2_scores)
     except Exception as e:
         print("Error in normalizing scores: ", e)
-    
-    visu_seperate = True 
-    if visu_seperate:
-        aff1_rgbs = convert_to_rgb(aff1_scores) 
-        aff1_fn = fn.replace('map', 'map1')
-        render_pc(init_pcs, aff1_rgbs, aff1_fn)
-        
-        aff2_rgbs = convert_to_rgb(aff2_scores)
-        aff2_fn = fn.replace('map', 'map2')
-        render_pc(init_pcs, aff2_rgbs, aff2_fn)
         
     aff_scores = aff1_scores * object1_mask + aff2_scores * object2_mask
     try:
