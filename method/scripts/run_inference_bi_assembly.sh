@@ -1,0 +1,22 @@
+CUDA_VISIBLE_DEVICES=0 xvfb-run -a python inference_data_all_models_main.py \
+    --out_dir ../results/biassembly     \
+    --setting BiAssembly    \
+    --disassembly_predictor_path ../logs/exp-model_disassembly  \
+    --disassembly_predictor_epoch 40    \
+    --pickup_predictor_path ../logs/exp-model_bi_affordance     \
+    --pickup_predictor_epoch 24     \
+    --test_data_dir ../data/Test    \
+    --test_data_num 100 \
+    --assembly_dist 0.4 \
+    --assigned_category BeerBottle,Bottle,Bowl,Mug,PillBottle,Statue,Teapot,ToyFigure,Vase,WineGlass    \
+    --repeat_num    1   \
+    --num_processes 10  \
+    --num_point_per_shape 2048  \
+    --feat_dim 128  \
+    --z_dim 32  \
+    --critic_topk 0.1   \
+    --delta_p 0.2   \
+    --delta_q 30    \
+    --draw_aff_map  \
+    --save_data     \
+    --no_gui        \
