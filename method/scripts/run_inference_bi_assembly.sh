@@ -5,7 +5,7 @@ CUDA_VISIBLE_DEVICES=0 xvfb-run -a python inference_data_all_models_main.py \
     --disassembly_predictor_epoch 40    \
     --pickup_predictor_path ../logs/exp-model_bi_affordance     \
     --pickup_predictor_epoch 24     \
-    --test_data_dir ../data/Test    \
+    --test_data_dir ../data/Test/Novel_Instances/json_files    \
     --test_data_num 100 \
     --assembly_dist 0.4 \
     --assigned_category BeerBottle,Bottle,Bowl,Mug,PillBottle,Statue,Teapot,ToyFigure,Vase,WineGlass    \

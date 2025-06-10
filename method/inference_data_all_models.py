@@ -8,7 +8,6 @@ import imageio
 import copy
 import sys
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-print('BASE_DIR: ', BASE_DIR)
 sys.path.append(os.path.join(BASE_DIR, '..'))
 
 from sapien.core import Pose
@@ -32,8 +31,6 @@ def simulation(json_file, file_id, repeat_id, models, device, args):
     robot_scale = result_data['robot_scale']
     start_dist = result_data['start_dist']
     final_dist = result_data['final_dist']
-    print('start_dist: ', start_dist)
-    print('final_dist: ', final_dist)
     
     batch_size = 1
     info = [category, 1e10, 1e10]   # category, delta_p, delta_q
@@ -266,7 +263,7 @@ def simulation(json_file, file_id, repeat_id, models, device, args):
     assembly_pose1 = env.objects[0].get_root_pose()
     assembly_pose2 = env.objects[1].get_root_pose()
     delta_p, delta_q = utils.get_pose_delta(assembly_pose1, assembly_pose2)
-    print('delta_p: ', delta_p, '\tdelta_q: ', delta_q)
+    # print('delta_p: ', delta_p, '\tdelta_q: ', delta_q)
     out_info['delta_p'] = delta_p.tolist()
     out_info['delta_q'] = delta_q.tolist()
     info[1] = delta_p

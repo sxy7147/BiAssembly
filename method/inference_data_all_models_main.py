@@ -123,7 +123,7 @@ if __name__ == '__main__':
                     filtered_json_files.append(json_file)
                 break 
     json_files = filtered_json_files
-    print('json_files: ', json_files, len(json_files))
+    # print('json_files: ', json_files, len(json_files))
     NUM = len(json_files) * args.repeat_num
     
     # create folders

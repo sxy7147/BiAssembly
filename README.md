@@ -6,7 +6,7 @@
 
 
 
-## About the paper
+## About the Paper
 
 BiAssambly is accepted to ICML 2025.
 
@@ -14,14 +14,13 @@ Arxiv Version: https://arxiv.org/pdf/2506.06221
 
 Project Page: https://sites.google.com/view/biassembly/
 
+## Before Start
 
-
-## Before start
-
-To train the models, please first go to the `assets` directory and download the pre-processed Breaking-Bad dataset for BiAssembly and put it under `assets/object/breaking_bad`.
-More information about the Breaking-Bad dataset is available on this [website](https://breaking-bad-dataset.github.io).
+To train the models, please first go to the `assets` directory and download the pre-processed Breaking-Bad dataset for BiAssembly and put it under `assets/object/breaking_bad`. More information about the Breaking-Bad dataset is available on this [website](https://breaking-bad-dataset.github.io).
 
 To evaluate the pretrained models, please go to the `logs` directory and download the pretrained checkpoints.
+
+For real-world benchmark, you can find both the reconstructions of complete shapes and the fractured parts in the `realworld-benchmark` directory.
 
 You can click [here](https://mirrors.pku.edu.cn/dl-release/BiAssembly_ICML2025/) to download all resources.
 
@@ -63,8 +62,6 @@ You can refer to `gen_cate_setting.py` to see the default settings of categories
 
     python gen_cate_setting.py
 
-For convenience, we also provide a small testing dataset, which can be downloaded [here](https://mirrors.pku.edu.cn/dl-release/BiAssembly_ICML2025/).
-
 ## Training Pipeline for the BiAssembly Framework
 
 To train the **Disassembly Predictor** and the **Transformation Predictor**, run:
@@ -84,6 +81,12 @@ To evaluate and visualize the results, run the following command:
     sh scripts/run_inference_bi_assembly.sh
 
 This script uses the pretrained networks to propose interactions in simulation. The manipulation results will be saved as `.gif` files. Additionally, affordance maps are visualized and saved in `.ply` format, which can be viewed using [MeshLab](https://www.meshlab.net/).
+
+For convenience, we provide the testing dataset, which includes a set of novel instances within the training categories as well as a set of novel categories. It can be downloaded [here](https://mirrors.pku.edu.cn/dl-release/BiAssembly_ICML2025/). 
+
+Please note that, due to the randomness in data collection, this provided testing dataset imay differ from those used in the paper, so you may result in slightly different but comparable results compared with the results in paper. Besides, since cVAE networks may produce varying outputs based on different Gaussian noise z sampled from a Gaussian distribution (depending on the random seed), we recommend setting the value of `repeat_num` to be greater than 1 to obtain more stable results.
+
+
 
 ## Citations
 
