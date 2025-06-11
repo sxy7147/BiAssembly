@@ -103,9 +103,7 @@ If you find this paper useful, please consider staring 🌟 this repo and citing
 
 ## Questions
 
-For questions or further assistance, please open an issue on our GitHub repository. We encourage using GitHub issues rather than email, as your questions may help others as well.
-
-If you prefer, you can also contact us via email at: yan790 [at] pku [dot] edu [dot] cn.
+For questions or further assistance, please open an issue on our GitHub repository. We encourage using GitHub issues rather than email, as your questions may help others as well. If you prefer, you can also contact us via email at: yan790 [at] pku [dot] edu [dot] cn.
 
 
 
