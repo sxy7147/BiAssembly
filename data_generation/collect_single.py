@@ -587,7 +587,7 @@ if delta_p > 0.1 or delta_q > 20 or bad_contacts:
             json.dump(out_info, fout)
         utils.save_all_data()
     exit(4)
-
+utils.save_all_data()
 print(f"{trial_id} success: {time.time() - t0:.2f} seconds")
 os.makedirs(os.path.join(out_dir_root, 'succ_gif'), exist_ok=True)
 os.makedirs(os.path.join(out_dir_root, 'succ_files'), exist_ok=True)
